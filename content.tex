@@ -1,0 +1,76 @@
+\section{General description}
+
+The selected collection represents a personal photo library, containing about
+3600 image files. As the feedback for part one of the assignment stated, we
+concentrated on just JPG-images (rather than also including video files).\\
+
+However, as we tried to select samples as broad as possible, we included samples
+from other filetypes in part one of our assignment. We had to dismiss these
+samples in order to move on to part two. This reduced our number of samples to
+5.\\
+
+Note that we were not able to upload two of the result sample files because of
+their size (larger than 20 MiB).
+
+\section{Alternative selection}
+
+As our selected file format was JPG, we had to decide what image format to use
+for digital preservation. One alternative was to simply keep the status quo.
+However, in order to produce more meaningful results, we opted for converting
+the files. Another reason for switching from JPG is the fact that there are
+still patent lawsuits active that concern the JPG format \cite{digpres:2013}.\\
+
+For alternative formats, we quickly decided to select the following formats for
+further evaluation:
+
+\begin{itemize}
+    \item TIFF
+    \item BMP
+\end{itemize}
+
+For tool selection, we decided to use the popular free open source image
+manipulation toolkit \texttt{ImageMagick}, as it provides a handy command-line
+interface that eases automation.\\
+
+As an alternative to \texttt{ImageMagick} we also selected
+\texttt{GraphicsMagick}, an \texttt{ImageMagick} clone with supposedly better
+performance.
+
+\section{Experiments}
+
+We decided to write little shellscrips for each of the selected tools. Listing
+\ref{lst:preserve-sh} depicts the shellscript for preserving a directory tree
+via \texttt{ImageMagick} (the \texttt{GraphicsMagick} variant is very similar,
+just the actual call for the conversion is different).
+
+\begin{lstlisting}[caption=Shellscript for preserving a directory tree via
+ImageMagick, label=lst:preserve-sh]
+bla
+asdf
+qwer
+for bla
+    todo shellscript here
+asdf
+\end{lstlisting}
+
+A sample invocation here looks as follows:
+
+\begin{lstlisting}
+> ./preserve.sh /path/to/source /path/to/destination tiff
+\end{lstlisting}
+
+This will recreate the source directory tree at the specified destination, with
+each JPG-file being converted to the target format (in this case TIFF).\\
+
+These shellscripts enabled a high degree of automation for performing our
+experiments. In order to process all of our samples quickly, a custom directory
+tree was arranged that contained nothing but our sample files (but at their
+correct relative location to each other).\\
+
+Each invocation of the scripts was timed with the gnu utility \texttt{time}.
+
+\section{Conclusions}
+
+In the end PLATO recommended the conversion to TIFF files. 
+
+\section{PLATO Feedback}

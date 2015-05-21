@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{tablefootnote}
+\usepackage{natbib}
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks]{hyperref}
+\usepackage{todonotes}
+\usepackage{marginnote}
+\usepackage{listings}
+\let\marginpar\marginnote
+
+\lstset{
+    basicstyle=\ttfamily
+}
+
+\begin{document}
+
+\title{%
+    \vspace{3cm}
+    Exercise 2 in Digital Preservation\\
+    \large{Preservation Planning using PLATO}
+}
+
+\author{
+\begin{tabular}{cc}
+Roman Decker   & Sebastian Störchle \\
+0828572        & 0825711            \\
+e0828572@student.tuwien.ac.at & e0825711@student.tuwien.ac.at \\
+\end{tabular}
+}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{content}
+
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\end{document}
+
